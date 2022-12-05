@@ -1,19 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
     <title>Document</title>
     <style>
-        .cont{
-            background:linear-gradient(45deg,blue,red,blue); ;
-            border-radius: 20px;
-        }
+      .cont {
+        background: linear-gradient(45deg, blue, red, blue);
+        border-radius: 20px;
+      }
+      .letra {
+        font-family: Brush Script MT;
+        color: red;
+      }
+      .heart-shape {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background-color: red;
+      }
+      .heart-shape:before,
+      .heart-shape:after {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        content: "";
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        background-color: red;
+      }
+      .heart-shape:before {
+        bottom: 0px;
+        left: -100px;
+      }
+      .heart-shape:after {
+        top: -100px;
+        right: 0px;
+      }
     </style>
-</head>
-<body>
-<h1>hola mundo</h1>
-</body>
-    Indagaremos en el nuevo mundo del Desarrollo web
+  </head>
+  <body>
+    <div class="d-flex container-fluid flex-wrap">
+      <div id="con1" class="p-3 m-5 cont">
+        <form id="formId">
+          <div class="form-group">
+            <label class="text-light">Nombre:</label>
+            <input type="text" class="form-control nomId" placeholder="" />
+          </div>
+          <div class="form-group">
+            <label for="edadId" class="text-light">Edad:</label>
+            <input type="text" class="form-control" id="edadId"/>
+          </div>
+          <button id="boton1" type="submit" class="btn btn-primary m-3">
+            Guardar
+          </button>
+        </form>
+      </div>
+      <div id="con2" class="d-none m-5">
+        <h1 class="letra">YESSICA LONDRE</h1>
+        <h1 class="letra">TE AMO</h1>
+        <h1 class="letra">ERES LA MAS HERMOSA DEL MUNDO</h1>
+      </div>
+      <div id="con3" class="d-none p-5 m-5">
+        <div class="heart-shape"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
